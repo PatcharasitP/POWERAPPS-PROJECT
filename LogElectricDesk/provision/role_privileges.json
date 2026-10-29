@@ -1,0 +1,2221 @@
+{
+ "LE Member": {
+  "roleid": "2f17f85c-90d3-f111-a05b-000d3a8247d0",
+  "privileges": [
+   {
+    "name": "prvReadWorkflowSession",
+    "depth": "Global"
+   },
+   {
+    "name": "prvCreatele_history",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadOptionSet",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadTransactionCurrency",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadCustomerRelationship",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadImport",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvWritele_logelectric",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvDeleteUserForm",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadOrganization",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReaddesktopflowmodule",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadMailboxTrackingFolder",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadPostFollow",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadMailbox",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadTraceLog",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadLanguageLocale",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadAsyncOperation",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadExternalParty",
+    "depth": "Global"
+   },
+   {
+    "name": "prvCreateUserSettings",
+    "depth": "Local"
+   },
+   {
+    "name": "prvReadmsdyn_dmsrequeststatus",
+    "depth": "Global"
+   },
+   {
+    "name": "prvCreateUserEntityUISettings",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadUserEntityUISettings",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvWriteUserEntityUISettings",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvDeleteUserEntityUISettings",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadAccount",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadflowsession",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadmsdyn_AIModel",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadAppConfigMaster",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadMCPResource",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadPartnerApplication",
+    "depth": "Global"
+   },
+   {
+    "name": "prvCreateUserQueryVisualizations",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadExpiredProcess",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadUserQuery",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadActionCard",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvDeleteUserSettings",
+    "depth": "Local"
+   },
+   {
+    "name": "prvReadNewsArticle",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReaduxagentproject",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadMCPTool",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadAttribute",
+    "depth": "Global"
+   },
+   {
+    "name": "prvAppendle_history",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadmsdyn_customcontrolextendedsettings",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadQueue",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadTranslationProcess",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadMCPServer",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvCreateUserApplicationMetadata",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadconnector",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadDuplicateRule",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSharePointData",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadTeam",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadCanvasAppExtendedMetadata",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSdkMessage",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadChannelPropertyGroup",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadBusinessUnit",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSavedQueryVisualizations",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadChannelAccessProfile",
+    "depth": "Local"
+   },
+   {
+    "name": "prvReadUserSettings",
+    "depth": "Global"
+   },
+   {
+    "name": "prvDeleteUserApplicationMetadata",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadContact",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadmsdyn_rtetemplatemapping",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadLicense",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadOrganizationSetting",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadWebResource",
+    "depth": "Global"
+   },
+   {
+    "name": "prvWriteUserSettings",
+    "depth": "Local"
+   },
+   {
+    "name": "prvReadle_history",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadmsdyn_geolocationrecord",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadArticle",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadKnowledgeArticle",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadAttributeMap",
+    "depth": "Global"
+   },
+   {
+    "name": "prvAppendTole_logelectric",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvCreateUserForm",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadEntity",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadMCPResourceContent",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadAzureServiceConnection",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadle_logelectric",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadKnowledgeArticleViews",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadmsdyn_rtestructuredtemplateconfig",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSharePointDocumentLocation",
+    "depth": "Global"
+   },
+   {
+    "name": "prvWriteSharePointData",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadWebWizard",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadDelveActionHub",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadworkflowbinary",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadmsdyn_favoriteknowledgearticle",
+    "depth": "Global"
+   },
+   {
+    "name": "prvWriteUserQuery",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadActionCardUserSettings",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadGoalRollupQuery",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadSLAKPIInstance",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadEnvironmentVariableDefinition",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadAuthorizationServer",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadActivity",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadAgentRule",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSuggestionCardTemplate",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadmsdyn_AIOdLabel",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSdkMessageProcessingStepImage",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadEmailSignature",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadApplicationFile",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadProfileRule",
+    "depth": "Local"
+   },
+   {
+    "name": "prvReadSystemForm",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadRoutingRule",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadPersonalDocumentTemplate",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadQuery",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadFeedback",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadEntityKey",
+    "depth": "Global"
+   },
+   {
+    "name": "prvDeleteUserQuery",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadUserForm",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadImportFile",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadInteractionForEmail",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSyncError",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadImportMap",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadRelationshipRole",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadConnection",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadConvertRule",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadHierarchyRule",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadOfficeGraphDocument",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadGoal",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadRelationship",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadWizardPage",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadWorkflow",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvWriteUserForm",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadmsdyn_dmsrequest",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadDocumentTemplate",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadPosition",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadEmailServerProfile",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSkill",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadExpanderEvent",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadNewProcess",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadMobileOfflineProfile",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadmsdyn_AIEvent",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadSystemApplicationMetadata",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadCategory",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadEntityDataProvider",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadCustomization",
+    "depth": "Global"
+   },
+   {
+    "name": "prvAppendle_logelectric",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadSettingDefinition",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadmsdyn_timelinepin",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadMailMergeTemplate",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadPost",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSdkMessageProcessingStep",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadUserApplicationMetadata",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadArticleTemplate",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadWorkflowMetadata",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadPluginAssembly",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSocialProfile",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadACIViewMapper",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadComplexControl",
+    "depth": "Global"
+   },
+   {
+    "name": "prvDeleteUserQueryVisualizations",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvCreateUserQuery",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvCreateSharePointData",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadCallbackRegistration",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadPluginType",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadEntityMap",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadmsdyn_rtestructuredtemplate",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadMCPPrompt",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadmsdyn_AIBFeedbackLoop",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadSharePointDocument",
+    "depth": "Global"
+   },
+   {
+    "name": "prvCreatele_logelectric",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadUser",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReaddesktopflowbinary",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadConnectionRole",
+    "depth": "Global"
+   },
+   {
+    "name": "prvCreateUserEntityInstanceData",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadUserEntityInstanceData",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvWriteUserEntityInstanceData",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvDeleteUserEntityInstanceData",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvWriteUserApplicationMetadata",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReaduxagentcomponent",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadRole",
+    "depth": "Local"
+   },
+   {
+    "name": "prvReadAppModule",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSharePointSite",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadUserQueryVisualizations",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadRecommendedDocument",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadEmailTemplate",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadMetric",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadOfficeDocument",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadmsdyn_AITemplate",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSLA",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadmsdyn_richtextfile",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadtrait",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadNote",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadmsdyn_AIBDatasetsContainer",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvWriteUserQueryVisualizations",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadWizardAccessPrivilege",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadReport",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadKnowledgeBaseRecord",
+    "depth": "Global"
+   }
+  ]
+ },
+ "LE Manager": {
+  "roleid": "b2142d65-90d3-f111-a05b-000d3a8247d0",
+  "privileges": [
+   {
+    "name": "prvReadWorkflowSession",
+    "depth": "Global"
+   },
+   {
+    "name": "prvCreatele_history",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadOptionSet",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadTransactionCurrency",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadCustomerRelationship",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadImport",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvWritele_logelectric",
+    "depth": "Global"
+   },
+   {
+    "name": "prvDeleteUserForm",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadOrganization",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReaddesktopflowmodule",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadMailboxTrackingFolder",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadPostFollow",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadMailbox",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadTraceLog",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadLanguageLocale",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadAsyncOperation",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadExternalParty",
+    "depth": "Global"
+   },
+   {
+    "name": "prvCreateUserSettings",
+    "depth": "Local"
+   },
+   {
+    "name": "prvReadmsdyn_dmsrequeststatus",
+    "depth": "Global"
+   },
+   {
+    "name": "prvCreateUserEntityUISettings",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadUserEntityUISettings",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvWriteUserEntityUISettings",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvDeleteUserEntityUISettings",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadAccount",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadflowsession",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvAssignle_history",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadmsdyn_AIModel",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadAppConfigMaster",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadMCPResource",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadPartnerApplication",
+    "depth": "Global"
+   },
+   {
+    "name": "prvCreateUserQueryVisualizations",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadExpiredProcess",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadUserQuery",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadActionCard",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvDeleteUserSettings",
+    "depth": "Local"
+   },
+   {
+    "name": "prvReadNewsArticle",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReaduxagentproject",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadMCPTool",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadAttribute",
+    "depth": "Global"
+   },
+   {
+    "name": "prvAppendle_history",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadmsdyn_customcontrolextendedsettings",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadQueue",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadTranslationProcess",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadMCPServer",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvCreateUserApplicationMetadata",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadconnector",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadDuplicateRule",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSharePointData",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadTeam",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadCanvasAppExtendedMetadata",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSdkMessage",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadChannelPropertyGroup",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadBusinessUnit",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSavedQueryVisualizations",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadChannelAccessProfile",
+    "depth": "Local"
+   },
+   {
+    "name": "prvReadUserSettings",
+    "depth": "Global"
+   },
+   {
+    "name": "prvDeleteUserApplicationMetadata",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadContact",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadmsdyn_rtetemplatemapping",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadLicense",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadOrganizationSetting",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadWebResource",
+    "depth": "Global"
+   },
+   {
+    "name": "prvWriteUserSettings",
+    "depth": "Local"
+   },
+   {
+    "name": "prvReadle_history",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadmsdyn_geolocationrecord",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadArticle",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadKnowledgeArticle",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadAttributeMap",
+    "depth": "Global"
+   },
+   {
+    "name": "prvAppendTole_logelectric",
+    "depth": "Global"
+   },
+   {
+    "name": "prvCreateUserForm",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadEntity",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadMCPResourceContent",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadAzureServiceConnection",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadle_logelectric",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadKnowledgeArticleViews",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadmsdyn_rtestructuredtemplateconfig",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSharePointDocumentLocation",
+    "depth": "Global"
+   },
+   {
+    "name": "prvWriteSharePointData",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadWebWizard",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadDelveActionHub",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadworkflowbinary",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadmsdyn_favoriteknowledgearticle",
+    "depth": "Global"
+   },
+   {
+    "name": "prvWriteUserQuery",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadActionCardUserSettings",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadGoalRollupQuery",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadSLAKPIInstance",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadEnvironmentVariableDefinition",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadAuthorizationServer",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadActivity",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadAgentRule",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSuggestionCardTemplate",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadmsdyn_AIOdLabel",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSdkMessageProcessingStepImage",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadEmailSignature",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadApplicationFile",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadProfileRule",
+    "depth": "Local"
+   },
+   {
+    "name": "prvReadSystemForm",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadRoutingRule",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadPersonalDocumentTemplate",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadQuery",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadFeedback",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadEntityKey",
+    "depth": "Global"
+   },
+   {
+    "name": "prvDeleteUserQuery",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadUserForm",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadImportFile",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadInteractionForEmail",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSyncError",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadImportMap",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadRelationshipRole",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadConnection",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadConvertRule",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadHierarchyRule",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadOfficeGraphDocument",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadGoal",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadRelationship",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadWizardPage",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadWorkflow",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvWriteUserForm",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadmsdyn_dmsrequest",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadDocumentTemplate",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadPosition",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadEmailServerProfile",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSkill",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadExpanderEvent",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadNewProcess",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadMobileOfflineProfile",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadmsdyn_AIEvent",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadSystemApplicationMetadata",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadCategory",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadEntityDataProvider",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadCustomization",
+    "depth": "Global"
+   },
+   {
+    "name": "prvAppendle_logelectric",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSettingDefinition",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadmsdyn_timelinepin",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadMailMergeTemplate",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadPost",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSdkMessageProcessingStep",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadUserApplicationMetadata",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadArticleTemplate",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadWorkflowMetadata",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadPluginAssembly",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSocialProfile",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadACIViewMapper",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadComplexControl",
+    "depth": "Global"
+   },
+   {
+    "name": "prvDeleteUserQueryVisualizations",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvCreateUserQuery",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvCreateSharePointData",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadCallbackRegistration",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadPluginType",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadEntityMap",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadmsdyn_rtestructuredtemplate",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadMCPPrompt",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadmsdyn_AIBFeedbackLoop",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvAssignle_logelectric",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSharePointDocument",
+    "depth": "Global"
+   },
+   {
+    "name": "prvCreatele_logelectric",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadUser",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReaddesktopflowbinary",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadConnectionRole",
+    "depth": "Global"
+   },
+   {
+    "name": "prvCreateUserEntityInstanceData",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadUserEntityInstanceData",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvWriteUserEntityInstanceData",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvDeleteUserEntityInstanceData",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvWriteUserApplicationMetadata",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReaduxagentcomponent",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadRole",
+    "depth": "Local"
+   },
+   {
+    "name": "prvReadAppModule",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSharePointSite",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadUserQueryVisualizations",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadRecommendedDocument",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadEmailTemplate",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadMetric",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadOfficeDocument",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadmsdyn_AITemplate",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSLA",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadmsdyn_richtextfile",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadtrait",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadNote",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadmsdyn_AIBDatasetsContainer",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvWriteUserQueryVisualizations",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadWizardAccessPrivilege",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadReport",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadKnowledgeBaseRecord",
+    "depth": "Global"
+   }
+  ]
+ },
+ "LE Admin": {
+  "roleid": "83152d65-90d3-f111-a05b-000d3a8247d0",
+  "privileges": [
+   {
+    "name": "prvReadWorkflowSession",
+    "depth": "Global"
+   },
+   {
+    "name": "prvCreatele_history",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadOptionSet",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadTransactionCurrency",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadCustomerRelationship",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadImport",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvWritele_logelectric",
+    "depth": "Global"
+   },
+   {
+    "name": "prvDeleteUserForm",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadOrganization",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReaddesktopflowmodule",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadMailboxTrackingFolder",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadPostFollow",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadMailbox",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadTraceLog",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadLanguageLocale",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadAsyncOperation",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadExternalParty",
+    "depth": "Global"
+   },
+   {
+    "name": "prvCreateUserSettings",
+    "depth": "Local"
+   },
+   {
+    "name": "prvReadmsdyn_dmsrequeststatus",
+    "depth": "Global"
+   },
+   {
+    "name": "prvCreateUserEntityUISettings",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadUserEntityUISettings",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvWriteUserEntityUISettings",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvDeleteUserEntityUISettings",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadAccount",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadflowsession",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvAssignle_history",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadmsdyn_AIModel",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadAppConfigMaster",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadMCPResource",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadPartnerApplication",
+    "depth": "Global"
+   },
+   {
+    "name": "prvCreateUserQueryVisualizations",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadExpiredProcess",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadUserQuery",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadActionCard",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvDeleteUserSettings",
+    "depth": "Local"
+   },
+   {
+    "name": "prvReadNewsArticle",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReaduxagentproject",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadMCPTool",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadAttribute",
+    "depth": "Global"
+   },
+   {
+    "name": "prvAppendle_history",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadmsdyn_customcontrolextendedsettings",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadQueue",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadTranslationProcess",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadMCPServer",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvCreateUserApplicationMetadata",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadconnector",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadDuplicateRule",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSharePointData",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadTeam",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadCanvasAppExtendedMetadata",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSdkMessage",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadChannelPropertyGroup",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadBusinessUnit",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSavedQueryVisualizations",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadChannelAccessProfile",
+    "depth": "Local"
+   },
+   {
+    "name": "prvReadUserSettings",
+    "depth": "Global"
+   },
+   {
+    "name": "prvDeleteUserApplicationMetadata",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadContact",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadmsdyn_rtetemplatemapping",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadLicense",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadOrganizationSetting",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadWebResource",
+    "depth": "Global"
+   },
+   {
+    "name": "prvWriteUserSettings",
+    "depth": "Local"
+   },
+   {
+    "name": "prvReadle_history",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadmsdyn_geolocationrecord",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadArticle",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadKnowledgeArticle",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadAttributeMap",
+    "depth": "Global"
+   },
+   {
+    "name": "prvAppendTole_logelectric",
+    "depth": "Global"
+   },
+   {
+    "name": "prvCreateUserForm",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadEntity",
+    "depth": "Global"
+   },
+   {
+    "name": "prvDeletele_logelectric",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadMCPResourceContent",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadAzureServiceConnection",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadle_logelectric",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadKnowledgeArticleViews",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadmsdyn_rtestructuredtemplateconfig",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSharePointDocumentLocation",
+    "depth": "Global"
+   },
+   {
+    "name": "prvWriteSharePointData",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadWebWizard",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadDelveActionHub",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadworkflowbinary",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadmsdyn_favoriteknowledgearticle",
+    "depth": "Global"
+   },
+   {
+    "name": "prvWriteUserQuery",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadActionCardUserSettings",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadGoalRollupQuery",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadSLAKPIInstance",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadEnvironmentVariableDefinition",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadAuthorizationServer",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadActivity",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadAgentRule",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSuggestionCardTemplate",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadmsdyn_AIOdLabel",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSdkMessageProcessingStepImage",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadEmailSignature",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadApplicationFile",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadProfileRule",
+    "depth": "Local"
+   },
+   {
+    "name": "prvReadSystemForm",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadRoutingRule",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadPersonalDocumentTemplate",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadQuery",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadFeedback",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadEntityKey",
+    "depth": "Global"
+   },
+   {
+    "name": "prvAppendTole_history",
+    "depth": "Global"
+   },
+   {
+    "name": "prvDeleteUserQuery",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadUserForm",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadImportFile",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadInteractionForEmail",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSyncError",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadImportMap",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadRelationshipRole",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadConnection",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadConvertRule",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadHierarchyRule",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadOfficeGraphDocument",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadGoal",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadRelationship",
+    "depth": "Global"
+   },
+   {
+    "name": "prvWritele_history",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadWizardPage",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadWorkflow",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvWriteUserForm",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadmsdyn_dmsrequest",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadDocumentTemplate",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadPosition",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadEmailServerProfile",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSkill",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadExpanderEvent",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadNewProcess",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadMobileOfflineProfile",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadmsdyn_AIEvent",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadSystemApplicationMetadata",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadCategory",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadEntityDataProvider",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadCustomization",
+    "depth": "Global"
+   },
+   {
+    "name": "prvAppendle_logelectric",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSettingDefinition",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadmsdyn_timelinepin",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadMailMergeTemplate",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadPost",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSdkMessageProcessingStep",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadUserApplicationMetadata",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadArticleTemplate",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadWorkflowMetadata",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadPluginAssembly",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSocialProfile",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadACIViewMapper",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadComplexControl",
+    "depth": "Global"
+   },
+   {
+    "name": "prvDeleteUserQueryVisualizations",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvCreateUserQuery",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvCreateSharePointData",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadCallbackRegistration",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadPluginType",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadEntityMap",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadmsdyn_rtestructuredtemplate",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadMCPPrompt",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadmsdyn_AIBFeedbackLoop",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvAssignle_logelectric",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSharePointDocument",
+    "depth": "Global"
+   },
+   {
+    "name": "prvCreatele_logelectric",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadUser",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReaddesktopflowbinary",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvDeletele_history",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadConnectionRole",
+    "depth": "Global"
+   },
+   {
+    "name": "prvCreateUserEntityInstanceData",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadUserEntityInstanceData",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvWriteUserEntityInstanceData",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvDeleteUserEntityInstanceData",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvWriteUserApplicationMetadata",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReaduxagentcomponent",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadRole",
+    "depth": "Local"
+   },
+   {
+    "name": "prvReadAppModule",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSharePointSite",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadUserQueryVisualizations",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadRecommendedDocument",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadEmailTemplate",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadMetric",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadOfficeDocument",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadmsdyn_AITemplate",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadSLA",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadmsdyn_richtextfile",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadtrait",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadNote",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadmsdyn_AIBDatasetsContainer",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvWriteUserQueryVisualizations",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadWizardAccessPrivilege",
+    "depth": "Global"
+   },
+   {
+    "name": "prvReadReport",
+    "depth": "Basic"
+   },
+   {
+    "name": "prvReadKnowledgeBaseRecord",
+    "depth": "Global"
+   }
+  ]
+ }
+}

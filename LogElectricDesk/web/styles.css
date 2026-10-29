@@ -1,0 +1,407 @@
+/* Log Electric Desk : ธีม TRUE สว่าง โปร่ง บาง ลดพื้นสี (ยกโทเคน ปุ่ม ตัวกรอง แผงข้าง toast dialog มาจาก Pending VAT Desk) */
+:root {
+  /* ธีม TRUE สว่างอย่างเดียว (พี่ปอนด์ 20/10) สีจาก References/Themes/TRUE_TOKENS.tokens.json */
+  --bg: #F7F7F7;
+  --surface: #FFFFFF;
+  --line: #E7E3DF;
+  --line-strong: #CFC9C4;
+  --fg: #252423;
+  --muted: #5F5B57;
+  --faint: #767069; /* เดิม #8C8781 คอนทราสต์ 3.56 ต่ำกว่า 4.5 (นักวิจารณ์ดีไซน์ รอบ 9) */
+  --accent: #E00000;
+  --accent-dark: #A80000;
+  --on-accent: #FFFFFF;
+  --risk: #C00000;
+  --warn: #C2410C;
+  --focus: #252423; /* กรอบช่องที่กำลังพิมพ์ใช้สีเข้มกลาง แดงดูเหมือนช่องผิด */
+  --font: "PV Sarabun", "Leelawadee UI", "Segoe UI", Tahoma, sans-serif; /* Sarabun ฝังใน fonts.css (พี่ปอนด์เคาะว่าเหมาะกับคนไทย) */
+  --sunken: #FAFAF9;  /* พื้นขั้นที่สาม หัวกลุ่ม แถบงาน (ความลึกจากพื้น ไม่ใช้เงา) */
+  --fs-title: 20px;
+  --fs-body: 15px;
+  --fs-label: 13px;
+  --radius: 10px;
+  --appbar-h: 52px;
+  --panel-w: 360px;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font-family: var(--font); font-size: var(--fs-body); line-height: 1.6;
+}
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 36px; padding: 6px 14px;
+  background: var(--surface); border: 1px solid var(--line-strong); border-radius: 8px; color: var(--fg); white-space: nowrap;
+}
+.btn:hover { background: var(--bg); }
+a.btn { text-decoration: none; } /* ลิงก์ที่แต่งเป็นปุ่มไม่ขีดเส้นใต้ */
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); font-weight: 600; }
+.btn.primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
+.btn:disabled, .btn[aria-disabled="true"] { opacity: .45; cursor: not-allowed; }
+/* ปุ่มหลักที่ยังกดไม่ได้เป็นเส้นบางเหมือนปุ่มรอง หนึ่งจอมีสีเน้นแค่ปุ่มที่กดได้จริง (แผน UX รอบ 8 U1 จาก cta.gallery) */
+.btn.primary:disabled { background: transparent; border-color: var(--line-strong); color: var(--muted); font-weight: 500; }
+.btn.link { border: 0; background: none; padding: 0 4px; min-height: 0; text-decoration: underline; color: inherit; }
+.btn.icon { padding: 0; width: 36px; }
+.btn.sm { min-height: 30px; padding: 2px 10px; font-size: 13px; }
+input[type="text"], input[type="search"], input[type="date"], input[type="number"], input[type="month"], select, textarea {
+  min-height: 38px; padding: 6px 10px; background: var(--surface); border: 1px solid var(--line-strong); border-radius: 8px; max-width: 100%;
+}
+textarea { width: 100%; min-height: 76px; resize: vertical; }
+input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--fg); margin: 0; vertical-align: middle; }
+.xf-pop input[type="checkbox"] { width: 14px; height: 14px; } /* ช่องติ๊กในตัวกรองเล็กลง (พี่ปอนด์ 29/10 รอบ 4 ใหญ่ไป) */
+input[type="radio"] { width: 16px; height: 16px; accent-color: var(--accent); margin: 0; vertical-align: middle; } /* ปุ่มวงกลมสีแดงตามธีม (พี่ปอนด์ 29/10 รอบ 4) */
+.field { display: flex; flex-direction: column; gap: 4px; }
+.flabel { font-size: 13px; color: var(--muted); }
+.fhint { font-size: 13px; color: var(--faint); } /* ตัวไทยไม่ต่ำกว่า 13px (นักวิจารณ์ดีไซเนอร์รอบ 3) */
+.ferr { color: var(--risk); font-size: 13px; min-height: 0; }
+.ferr:empty { display: none; }
+.field.has-error input { border-color: var(--risk); }
+.switch { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; }
+.side-panel {
+  position: fixed; z-index: 50; background: var(--surface); display: flex; flex-direction: column;
+  border-left: 1px solid var(--line-strong); transition: transform .2s ease-out;
+}
+@media (min-width: 900px) {
+  .side-panel { top: var(--appbar-h); right: 0; bottom: 0; width: var(--panel-w); transform: translateX(100%); visibility: hidden; }
+  .side-panel.open { transform: none; visibility: visible; }
+}
+@media (max-width: 899px) {
+  .side-panel {
+    left: 0; right: 0; bottom: 0; max-height: 80vh; border: 1px solid var(--line-strong); border-bottom: 0;
+    border-radius: 14px 14px 0 0; transform: translateY(105%); visibility: hidden; box-shadow: 0 -8px 28px rgba(0, 0, 0, .18);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .side-panel.open { transform: none; visibility: visible; }
+}
+.sp-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; padding: 14px 16px 6px; }
+.sp-title { font-size: 16px; }
+.sp-sub { color: var(--muted); font-size: 13px; overflow-wrap: anywhere; }
+.sp-body { padding: 8px 16px; overflow: auto; display: flex; flex-direction: column; gap: 12px; flex: 1; min-height: 0; }
+.sp-foot { display: flex; gap: 8px; justify-content: flex-end; padding: 12px 16px; border-top: 1px solid var(--line); }
+.sp-foot .btn.primary { flex: 1; }
+.sp-foot:empty { display: none; }
+#toast {
+  position: fixed; left: 16px; bottom: 16px; z-index: 80; max-width: min(420px, calc(100% - 32px)); display: flex; align-items: center; gap: 12px;
+  background: var(--fg); color: var(--bg); border-radius: 10px; padding: 10px 14px; opacity: 0; pointer-events: none; transform: translateY(12px);
+  transition: opacity .15s, transform .15s;
+}
+#toast.show { opacity: 1; pointer-events: auto; transform: none; }
+#toast[data-kind="error"] { box-shadow: inset 4px 0 0 var(--risk); padding-left: 18px; }
+#toast .toast-ic { flex: none; display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: #2E8B57; color: #fff; margin-right: -4px; }
+#toast[data-kind="success"] { animation: toast-pop .35s cubic-bezier(.2, 1.4, .4, 1); }
+@keyframes toast-pop { from { transform: scale(.9); } to { transform: none; } }
+#toast .btn.link { color: var(--bg); font-weight: 600; }
+@media (max-width: 899px) { #toast { top: calc(var(--appbar-h) + 8px); bottom: auto; transform: translateY(-12px); } #toast .btn.link { min-height: 44px; padding: 0 10px; } } /* มือถืออยู่บนจอ ไม่ทับแถบปุ่มล่างกับปุ่ม Send (นักวิจารณ์ลูกทีมรอบ 3) */
+dialog.dlg { border: 1px solid var(--line-strong); border-radius: 12px; padding: 18px; width: min(460px, calc(100% - 24px)); background: var(--surface); color: var(--fg); }
+dialog.dlg::backdrop { background: rgba(0, 0, 0, .4); }
+.dlg h2 { margin-bottom: 8px; font-size: 16px; }
+.dlg-body { display: flex; flex-direction: column; gap: 12px; margin-bottom: 14px; }
+.dlg-foot { display: flex; gap: 8px; justify-content: flex-end; }
+.xf-btn { opacity: 0; }
+th:hover .xf-btn, .xf-btn:focus-visible, .xf-btn.on { opacity: 1; }
+@media (hover: none) { .xf-btn { opacity: 1; } }
+.xf-btn { display: inline-flex; align-items: center; gap: 1px; border: 1px solid transparent; background: none; color: var(--faint); border-radius: 4px; padding: 1px 3px; min-height: 22px; }
+.xf-btn:hover { border-color: var(--line-strong); color: var(--fg); }
+.xf-btn.on { color: var(--fg); border-color: var(--line-strong); }
+.xf-btn.on svg { fill: currentColor; }
+.xf-btn { position: relative; }
+.xf-sort { position: absolute; top: -3px; right: -4px; font-size: 11px; font-weight: 700; line-height: 1; } /* ลอยมุมปุ่ม ไม่กินความกว้างหัวคอลัมน์ */
+.xf-pop {
+  position: fixed; z-index: 70; width: 300px; max-height: calc(100vh - 16px); overflow-y: auto; display: flex; flex-direction: column; gap: 4px;
+  background: var(--surface); border: 1px solid var(--line-strong); border-radius: var(--radius); padding: 8px; box-shadow: 0 8px 24px rgba(0, 0, 0, .16);
+}
+.xf-pop.sheet { left: 0; right: 0; bottom: 0; top: auto; width: auto; max-height: 80vh; border-radius: 14px 14px 0 0; padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px)); }
+.xf-head { display: flex; align-items: center; justify-content: space-between; padding: 0 2px 4px; border-bottom: 1px solid var(--line); }
+.xf-head .btn.icon { width: 30px; min-height: 30px; border: 0; }
+.xf-act { text-align: left; background: none; border: 0; border-radius: 6px; padding: 6px 8px; min-height: 34px; }
+.xf-act:hover:not(:disabled) { background: var(--bg); }
+.xf-act.on { font-weight: 600; }
+.xf-act:disabled { color: var(--faint); cursor: default; }
+.xf-act.xf-col { display: block; width: 100%; }
+.xf-on { color: var(--muted); font-size: 12px; }
+.xf-search { width: 100%; margin: 4px 0; }
+.xf-list { overflow: auto; flex: 1 1 auto; min-height: 120px; border: 1px solid var(--line); border-radius: 6px; padding: 4px 6px; }
+.xf-item { display: flex; width: 100%; padding: 3px 0; font-size: 13px; }
+.xf-item .xf-v { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.xf-item .xf-n { color: var(--faint); font-size: 12px; font-variant-numeric: tabular-nums; }
+.xf-allrow { padding: 2px 6px; }
+.xf-foot { display: flex; justify-content: flex-end; gap: 8px; padding-top: 6px; }
+.m-only { display: none; }
+@media (max-width: 639px) { .m-only { display: inline-flex; } }
+
+/* ---------- Log Electric: โครงหน้า ---------- */
+[hidden] { display: none !important; } /* .xf-pop .tip ตั้ง display เอง ทับ hidden จนกล่องเปล่าลอยกลางจอ (เห็นในภาพเทส 29/10) */
+* { box-sizing: border-box; }
+h1, h2, h3, p { margin: 0; }
+button { font: inherit; color: inherit; cursor: pointer; }
+input, select, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.grow { flex: 1; }
+.faint { color: var(--faint); }
+.row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.boot { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; }
+.boot-err { max-width: 520px; }
+.appbar { position: sticky; top: 0; z-index: 60; /* เหนือแผงข้าง (50) เมนูบทบาทจะได้ไม่โดนแผงทับ */ height: var(--appbar-h); display: flex; align-items: center; gap: 16px; padding: 0 16px; background: var(--surface); border-bottom: 1px solid var(--line); }
+.brand { font-weight: 600; letter-spacing: .01em; }
+.tabs { display: flex; gap: 2px; height: 100%; }
+.tab { display: inline-flex; align-items: center; gap: 6px; border: 0; background: none; padding: 0 12px; color: var(--muted); box-shadow: inset 0 -2px 0 transparent; }
+.tab[aria-selected="true"] { color: var(--fg); box-shadow: inset 0 -2px 0 var(--accent); font-weight: 600; }
+.userbox { display: flex; flex-direction: column; align-items: flex-end; line-height: 1.3; font-size: 13px; }
+.userbox .role { color: var(--faint); }
+.role-wrap { position: relative; }
+.role-btn { display: inline-flex; align-items: center; gap: 2px; border: 0; background: none; padding: 0; font: inherit; color: var(--faint); cursor: pointer; }
+.role-btn svg { transform: rotate(90deg); }
+.role-btn:hover { color: var(--fg); }
+.role-btn.viewing { color: #1E5E3A; font-weight: 600; } /* Admin กำลังดูแบบบทบาทอื่น */
+.role-menu { position: absolute; right: 0; top: calc(100% + 6px); z-index: 30; min-width: 140px; padding: 4px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,.12); }
+.role-menu button { display: flex; align-items: center; gap: 8px; width: 100%; padding: 7px 10px; border: 0; background: none; border-radius: 6px; font: inherit; font-size: 13px; color: var(--fg); text-align: left; cursor: pointer; }
+.role-menu button:hover { background: var(--sunken); }
+.role-menu button svg { visibility: hidden; color: #2E8B57; }
+.role-menu button[aria-checked="true"] svg { visibility: visible; }
+main { padding: 16px; }
+@media (min-width: 900px) { body.panel-open main { margin-right: var(--panel-w); } }
+.page { display: flex; flex-direction: column; gap: 12px; }
+.page.narrow { max-width: 860px; margin: 0 auto; }
+.page-h { font-size: var(--fs-title); font-weight: 600; }
+.toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.search { width: min(320px, 100%); }
+@media (max-width: 1280px) { .toolbar .search { width: 200px; } #rec-group, #rec-owner { width: 170px; } } /* จอโน้ตบุ๊กซูม 125% ให้แถบเครื่องมืออยู่บรรทัดเดียว */
+.subbar { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; min-height: 28px; }
+.summary { color: var(--muted); font-size: 14px; }
+.summary b { color: var(--fg); font-variant-numeric: tabular-nums; }
+.sep { display: inline-block; width: 1px; height: 12px; background: var(--line-strong); margin: 0 10px; vertical-align: middle; }
+.chip { display: inline-flex; align-items: center; gap: 4px; padding: 2px 4px 2px 10px; border: 1px solid var(--line-strong); border-radius: 999px; font-size: 13px; background: var(--surface); }
+.chip-x { border: 0; background: none; display: inline-flex; padding: 3px; border-radius: 50%; color: var(--muted); }
+.chip-x:hover { background: var(--bg); }
+.btn.danger { color: var(--risk); border-color: var(--risk); }
+.btn.danger:hover:not(:disabled) { background: var(--risk); color: #fff; }
+.link { border: 0; background: none; padding: 0; text-decoration: underline; text-underline-offset: 2px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; display: flex; flex-direction: column; gap: 8px; }
+.card.err b:first-child { color: var(--risk); }
+.card ul { margin: 0; padding-left: 20px; }
+
+/* ---------- ตาราง ---------- */
+.table-wrap { overflow: auto; max-height: calc(100vh - var(--appbar-h) - 150px); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+table.grid { border-collapse: separate; border-spacing: 0; width: max-content; min-width: 100%; font-size: 14px; }
+.grid th, .grid td { padding: 7px 10px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; max-width: 320px; }
+.grid td { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } /* แถวสูงเท่ากัน ข้อความยาวตัดด้วย … ชี้แล้วเห็นเต็ม (พี่ปอนด์ 29/10 ภาพ #35) */
+.grid th { position: sticky; top: 0; z-index: 2; background: var(--surface); font-weight: 600; font-size: 12px; color: var(--muted); letter-spacing: .02em; white-space: nowrap; box-shadow: inset 0 -1px 0 var(--line-strong); }
+.grid th.auto { color: var(--faint); font-weight: 500; }
+.th-in { display: inline-flex; align-items: center; gap: 4px; }
+.grid .num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.grid .nowrap { white-space: nowrap; }
+.grid tbody tr[data-id] { cursor: pointer; }
+.grid tbody tr[data-id]:hover td { background: var(--sunken); }
+.grid td.empty { padding: 32px; text-align: center; color: var(--faint); }
+.grid tr.grp td { background: var(--sunken); padding: 0; overflow: visible; }
+.grp-btn { display: inline-flex; align-items: center; gap: 10px; border: 0; background: none; padding: 8px 10px; text-align: left; position: sticky; left: 0; } /* td กว้างเท่าตาราง sticky ที่ td ไม่ติด ต้องให้ปุ่มข้างในติดแทน (วัด -549 ตอนเลื่อนขวา 29/10) */
+.grp-n { color: var(--muted); font-size: 13px; }
+.grp-sum { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; } /* ต่อท้ายจำนวนแถว เดิมชิดขวาสุดหลุดจอ (ภาพ #36) */
+.grp-sum b { color: var(--fg); font-weight: 600; }
+.chev { display: inline-flex; transition: transform .15s; }
+.chev.open { transform: rotate(90deg); }
+.more { display: flex; justify-content: center; }
+.more:empty { display: none; }
+.hist-n { font-size: 13px; }
+
+/* ---------- แผงรายละเอียด ฟอร์ม ประวัติ ---------- */
+:root { --panel-w: 420px; }
+.sp-h { font-size: 13px; color: var(--muted); font-weight: 600; margin-top: 4px; }
+dl.kv { display: grid; grid-template-columns: 150px 1fr; gap: 4px 10px; margin: 0; font-size: 14px; }
+dl.kv dt { color: var(--faint); font-size: 12px; padding-top: 2px; }
+dl.kv dd { margin: 0; overflow-wrap: anywhere; }
+.form { display: flex; flex-direction: column; gap: 10px; }
+.form input, .form select { width: 100%; }
+.req { color: var(--risk); }
+.auto-note { font-size: 13px; color: var(--muted); padding: 8px 10px; background: var(--sunken); border-radius: 8px; }
+.hist { display: flex; flex-direction: column; gap: 8px; }
+.hist-item { border-left: 2px solid var(--line-strong); padding: 2px 0 2px 10px; font-size: 13px; }
+.hist-head { display: flex; flex-wrap: wrap; gap: 8px; }
+table.diff { border-collapse: collapse; margin-top: 4px; font-size: 13px; }
+.diff th { text-align: left; font-weight: 500; color: var(--muted); padding: 1px 8px 1px 0; white-space: nowrap; vertical-align: top; }
+.diff td { padding: 1px 4px; vertical-align: top; overflow-wrap: anywhere; }
+.diff .from { color: var(--faint); text-decoration: line-through; }
+.diff .arrow { color: var(--faint); }
+.err { color: var(--risk); }
+
+/* ---------- นำเข้า ส่งออก ---------- */
+.steps { display: flex; flex-direction: column; gap: 14px; }
+.step { display: grid; grid-template-columns: 44px 1fr; gap: 8px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; }
+.step > div { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+.step-n { color: var(--faint); font-size: 13px; font-variant-numeric: tabular-nums; padding-top: 2px; }
+.drop { align-self: stretch; display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 28px 16px; border: 1.5px dashed var(--line-strong); border-radius: var(--radius); cursor: pointer; color: var(--muted); text-align: center; }
+.drop:hover, .drop.over { border-color: var(--fg); color: var(--fg); background: var(--sunken); }
+table.mini { border-collapse: collapse; font-size: 13px; }
+.mini th, .mini td { padding: 3px 12px 3px 0; text-align: left; border-bottom: 1px solid var(--line); }
+.mini .num { text-align: right; font-variant-numeric: tabular-nums; }
+.errlist { font-size: 13px; color: var(--muted); }
+progress { width: 220px; height: 8px; accent-color: var(--fg); }
+dialog.dlg.wide { width: min(720px, calc(100% - 24px)); }
+.dlg-h { font-size: 13px; color: var(--muted); font-weight: 600; margin: 14px 0 6px; }
+.colgrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px 12px; font-size: 13px; margin-bottom: 14px; }
+@media (max-width: 639px) { .colgrid { grid-template-columns: 1fr 1fr; } }
+
+/* ---------- Dashboard ---------- */
+:root { --mark: #3D6FB6; } /* แท่งสีเดียว ผ่านตัวตรวจสี dataviz บนพื้นขาว */
+.tiles { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; }
+@media (max-width: 1099px) { .tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 639px) { .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.tile { background: var(--surface); border-radius: var(--radius); padding: 12px 14px; }
+.tile-l { font-size: 12px; color: var(--muted); }
+.tile-v { font-size: 22px; font-weight: 600; font-variant-numeric: tabular-nums; line-height: 1.4; }
+.tile-s { font-size: 12px; color: var(--faint); }
+.panel { background: var(--surface); border-radius: var(--radius); padding: 14px 16px; display: flex; flex-direction: column; gap: 8px; }
+.panel h3 { font-size: 14px; font-weight: 600; }
+.panel summary { cursor: pointer; color: var(--muted); font-size: 13px; }
+.grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+@media (max-width: 899px) { .grid2 { grid-template-columns: 1fr; } }
+.hbars { display: flex; flex-direction: column; gap: 2px; }
+.hbar { display: grid; grid-template-columns: minmax(80px, 34%) 1fr 64px 48px; align-items: center; gap: 8px; border: 0; background: none; padding: 5px 4px; border-radius: 6px; text-align: left; font-size: 13px; }
+.hbar:hover { background: var(--sunken); }
+.hbar-k { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hbar-track { height: 10px; }
+.hbar-fill { display: block; height: 100%; background: var(--mark); border-radius: 0 4px 4px 0; }
+.hbar-v { text-align: right; font-variant-numeric: tabular-nums; }
+.hbar-n { text-align: right; color: var(--faint); font-variant-numeric: tabular-nums; }
+.colchart { width: 100%; height: auto; max-height: 260px; display: block; }
+.colchart .grid-l { stroke: var(--line); stroke-width: 1; }
+.colchart .ax { fill: var(--faint); font-size: 11px; }
+.colchart .lbl { fill: var(--fg); font-size: 11px; font-weight: 600; }
+.colchart .col-fill { fill: var(--mark); }
+.colchart .hit { fill: transparent; }
+.colchart .col { cursor: pointer; }
+.colchart .col:hover .col-fill { opacity: .8; }
+.tip { position: fixed; z-index: 90; pointer-events: none; white-space: pre; background: var(--fg); color: var(--bg); font-size: 12px; padding: 6px 9px; border-radius: 6px; }
+@media (max-width: 639px) {
+  .appbar { gap: 8px; padding: 0 8px; } .userbox .uname { display: none; } .tab span { display: none; } /* มือถือซ่อนแค่ชื่อ ป้ายบทบาทยังอยู่ Admin สลับบทบาทได้ */
+  main { padding: 12px; } .table-wrap { max-height: none; }
+}
+
+/* ---------- กล่องเงื่อนไขของตัวกรอง (พี่ปอนด์ 29/10 รอบ 2: ช่องติดกัน) ---------- */
+.xf-pop { width: 380px; }
+.xf-cond-menu { display: flex; align-items: center; justify-content: space-between; }
+.xf-cond-menu[aria-expanded="true"] svg { transform: rotate(90deg); }
+.xf-sub { display: grid; padding-left: 12px; border-left: 2px solid var(--line); margin: 0 0 6px 8px; }
+.xf-cond { display: flex; flex-direction: column; gap: 12px; padding: 12px 2px 14px; }
+.xf-crow { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 8px; } /* ช่องเลือกยาวกว่า Greater than or equal to ไม่โดนตัด */
+.xf-crow select, .xf-crow input { width: 100%; min-width: 0; }
+.xf-join { display: flex; gap: 20px; padding-left: 2px; font-size: 14px; }
+.xf-cond .fhint { margin-top: 2px; }
+.xf-foot { border-top: 1px solid var(--line); padding-top: 10px; margin-top: 2px; position: sticky; bottom: -8px; padding-bottom: 8px; background: var(--surface); } /* จอเตี้ย กล่องเลื่อนได้ แต่ปุ่ม OK ติดล่างเสมอ */
+@media (max-width: 639px) { .xf-pop { width: auto; } }
+@media (max-height: 820px) { .xf-act { min-height: 24px; padding: 2px 8px; font-size: 13px; } .xf-head { padding-bottom: 2px; } .xf-search { margin: 2px 0; } .xf-foot { padding-top: 6px; } } /* จอเตี้ย (กรอบ MDA บนโน้ตบุ๊ก) ย่อเมนูบน ให้ที่รายการค่า */
+
+/* ---------- ตรึงคอลัมน์ซ้าย (Freeze) ---------- */
+.grid .frz { position: sticky; z-index: 1; background: var(--surface); }
+.grid thead th.frz { z-index: 4; }
+.grid .frz-last { box-shadow: inset -1px 0 0 var(--line-strong); }
+.grid thead th.frz-last { box-shadow: inset -1px 0 0 var(--line-strong), inset 0 -1px 0 var(--line-strong); }
+.grid tbody tr[data-id]:hover td.frz { background: var(--sunken); }
+
+/* ---------- Go to column (Ctrl+G) ---------- */
+dialog.dlg.goto { width: min(420px, calc(100% - 24px)); }
+.goto-bar { display: flex; gap: 8px; margin: 6px 0 8px; }
+.goto-bar .search { flex: 1; width: auto; }
+.goto-list { display: flex; flex-direction: column; height: 320px; overflow: auto; border: 1px solid var(--line); border-radius: 8px; padding: 4px; margin-bottom: 14px; }
+.goto-item { text-align: left; border: 0; background: none; padding: 6px 10px; border-radius: 6px; font-size: 14px; }
+.goto-item.on { background: var(--sunken); box-shadow: inset 2px 0 0 var(--fg); }
+.goto-none { padding: 8px 10px; }
+.grid td.col-flash { background: #E3F4E9 !important; box-shadow: inset 1px 0 0 #7CC49A, inset -1px 0 0 #7CC49A; } /* เลือกคอลัมน์แบบ Excel เขียวอ่อนโทนเรา */
+.grid th.col-flash { background: #C8E8D4 !important; color: #1E5E3A; box-shadow: inset 1px 0 0 #7CC49A, inset -1px 0 0 #7CC49A, inset 0 -2px 0 #2E8B57; }
+
+.warn { color: var(--warn); font-size: 14px; }
+
+/* ปุ่มยืนยันในหน้าต่างย่อย สีเทาเข้ม สีแดงเก็บไว้ให้ปุ่มหลักของหน้า (พี่ปอนด์ 29/10 รอบ 3) */
+.btn.dark { background: var(--fg); border-color: var(--fg); color: #fff; font-weight: 600; }
+.btn.dark:hover { background: #000; border-color: #000; }
+.btn.dark:disabled { background: transparent; border-color: var(--line-strong); color: var(--muted); font-weight: 500; }
+.kbd { font: 11px/1 var(--font); color: var(--faint); border: 1px solid var(--line-strong); border-radius: 4px; padding: 2px 5px; margin-left: 2px; }
+
+/* ---------- หน้าโหลด: ปลั๊กไฟช็อต (ตัวการ์ตูนของเราเอง) ---------- */
+.boot .mascot { width: 110px; height: 128px; overflow: visible; filter: drop-shadow(0 6px 12px rgba(255, 194, 26, .45)); }
+.boot .brand { margin-top: 10px; }
+.mascot .bolt { animation: zap 1.4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.mascot .spark { animation: spark 1.4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.mascot .spark.s2 { animation-delay: .45s; } .mascot .spark.s3 { animation-delay: .9s; }
+@keyframes zap { 0%, 100% { transform: scale(1) rotate(0); opacity: 1; } 8% { opacity: .35; } 14% { opacity: 1; transform: scale(1.08) rotate(-3deg); } 22% { opacity: .6; } 30% { opacity: 1; transform: scale(1) rotate(0); } }
+@keyframes spark { 0%, 100% { opacity: 0; transform: scale(.3); } 40% { opacity: 1; transform: scale(1.1); } 70% { opacity: .2; transform: scale(.6); } }
+.boot .dots::after { content: ""; animation: dots 1.2s steps(4) infinite; }
+@keyframes dots { 0% { content: ""; } 25% { content: "."; } 50% { content: ".."; } 75% { content: "..."; } }
+@media (prefers-reduced-motion: reduce) { .mascot *, .boot .dots::after { animation: none !important; } }
+
+/* ---------- ลากขยายคอลัมน์ ---------- */
+.col-rs { position: absolute; top: 0; right: 0; width: 8px; height: 100%; cursor: col-resize; z-index: 5; touch-action: none; } /* อยู่ในหัวของตัวเองทั้งชิ้น ถ้ายื่นออกขวา หัวถัดไปทับแล้วกดไม่โดน */
+body.col-resizing, body.col-resizing * { cursor: col-resize !important; user-select: none; } /* ไม่มีเส้นที่ขอบ (พี่ปอนด์ 29/10 ไม่สวย) เหลือแค่เคอร์เซอร์ลูกศร */
+
+/* ---------- นำเข้าสำเร็จ (การ์ดฉลอง) ---------- */
+.card.done { position: relative; overflow: hidden; align-items: center; text-align: center; padding: 28px 16px 22px; border-color: #BFE3CC; }
+.card.done .done-title { font-size: 20px; color: #1E5E3A; }
+.card.done p { margin: 0; }
+.card.done .btn { margin-top: 6px; }
+.done-check { width: 64px; height: 64px; }
+.done-check .ring { fill: #2E8B57; transform-origin: center; animation: ring-pop .45s cubic-bezier(.2, 1.5, .4, 1) both; }
+.done-check .tick { fill: none; stroke: #fff; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 44; stroke-dashoffset: 44; animation: tick .4s .3s ease-out forwards; }
+@keyframes ring-pop { from { transform: scale(.3); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes tick { to { stroke-dashoffset: 0; } }
+.confetti { position: absolute; inset: 0; pointer-events: none; }
+.confetti i { position: absolute; left: 50%; top: 58px; width: 7px; height: 11px; margin-left: -3px; border-radius: 2px; background: var(--c); opacity: 0;
+  animation: confetti 1.2s cubic-bezier(.15, .7, .3, 1) var(--d) forwards; }
+@keyframes confetti { 0% { opacity: 1; transform: translate(0, 0) rotate(0); } 70% { opacity: 1; } 100% { opacity: 0; transform: translate(var(--x), calc(var(--y) + 40px)) rotate(var(--r)); } }
+@media (prefers-reduced-motion: reduce) { .confetti { display: none; } .done-check .ring, .done-check .tick, #toast[data-kind="success"] { animation: none !important; stroke-dashoffset: 0; } }
+
+/* ---------- ตัวกรองวันที่แบบต้นไม้ ปี > เดือน > วัน ---------- */
+.xf-tree { display: flex; align-items: center; gap: 2px; }
+.xf-tree .xf-item { flex: 1; min-width: 0; }
+.xf-tog { flex: none; width: 22px; height: 22px; display: grid; place-items: center; border: 0; background: none; padding: 0; color: var(--muted); border-radius: 4px; }
+button.xf-tog { cursor: pointer; }
+button.xf-tog:hover { background: var(--sunken); color: var(--fg); }
+.xf-tog svg { transition: transform .12s; }
+.xf-tog[aria-expanded="true"] svg { transform: rotate(90deg); }
+
+/* ---------- ทุกแถวในไฟล์ซ้ำกับในตาราง (เตือนแยก ไม่ระบายพื้นทั้งการ์ด) ---------- */
+.alldup { display: flex; gap: 10px; align-items: flex-start; padding: 10px 12px; border-radius: 8px; background: #FFF4E5; color: #8A3B00; }
+.alldup svg { flex: none; color: var(--warn); margin-top: 1px; }
+.alldup b { display: block; color: #8A3B00; }
+.alldup p { margin: 2px 0 0; font-size: 14px; }
+
+/* ---------- มือถือและแท็บเล็ต (พี่ปอนด์ 30/10 "ลองกับหลาย ๆ รุ่นด้วยหลาย ๆ มุม" เทส tests_web/le_mobile.py 16 รุ่น) ---------- */
+/* จอสัมผัส: ช่องพิมพ์ 16px ขึ้นไป ไม่งั้น iPhone ซูมหน้าเองตอนแตะ , ปุ่มเล็กขยายให้นิ้วแตะโดน อย่างน้อย 32px */
+@media (pointer: coarse) {
+  input[type="text"], input[type="search"], input[type="date"], input[type="number"], input[type="month"], select, textarea { font-size: 16px; }
+  .role-btn { min-height: 32px; }
+  .xf-btn { min-height: 32px; min-width: 32px; justify-content: center; }
+  .btn.sm { min-height: 36px; }
+  .xf-item { padding: 7px 0; }
+}
+/* มือถือแนวตั้ง: แถบเครื่องมือ 3 แถว ช่องค้นหาเต็มแถว , ช่องจัดกลุ่มกับช่องเลือกคนคู่กัน , ปุ่ม Add row ยาว ที่เหลือเหลือแค่ไอคอน */
+@media (max-width: 639px) {
+  .toolbar .search { flex: 1 1 100%; width: auto; }
+  .toolbar #rec-group, .toolbar #rec-owner { flex: 1 1 0; width: auto; min-width: 0; }
+  .toolbar { row-gap: 0; margin-bottom: -8px; } .toolbar > * { margin-bottom: 8px; } /* ระยะห่างแถวใส่ที่ตัวปุ่ม ตัวตัดบรรทัดสูง 0 จะได้ไม่กินช่องไฟเพิ่มอีกแถว */
+  .toolbar .grow { flex: 1 1 100%; height: 0; margin: 0; } /* ตัดบรรทัดหลังช่องเลือก */
+  .toolbar #btn-add { flex: 1; }
+  .toolbar .lbl { display: none; }
+  .toolbar #btn-export, .toolbar #btn-goto { padding: 0; width: 40px; justify-content: center; }
+}
+/* จอเตี้ย (มือถือแนวนอน): ตารางไม่ต้องเป็นกล่องเลื่อนในตัว ให้ทั้งหน้าเลื่อน เดิมเห็นข้อมูลแค่ 2 ถึง 3 แถว */
+@media (max-height: 500px) { .table-wrap { max-height: none; } }
+/* จอเตี้ยหรือจอแคบ: กล่องตัวกรองเลื่อนชั้นเดียว รายการค่าไม่เป็นกล่องเลื่อนซ้อนในกล่องเลื่อนอีกชั้น (นิ้วปัดแล้วไม่รู้ว่าอะไรเลื่อน) */
+@media (max-height: 500px), (max-width: 639px) { .xf-list { overflow: visible; flex: none; min-height: 0; } }
+/* ---------- ช่องเลือกคน พิมพ์ค้นหาชื่อได้ (พี่ปอนด์ 30/10 ภาพ #81) หน้าตาเหมือนช่องเลือกข้าง ๆ ---------- */
+.owner-box { position: relative; width: 230px; }
+.owner-btn { width: 100%; min-height: 38px; display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 6px 10px; font: inherit; color: inherit; text-align: left;
+  background: var(--surface); border: 1px solid var(--line-strong); border-radius: 8px; cursor: pointer; }
+.owner-btn svg { flex: none; transform: rotate(90deg); color: var(--fg); }
+.owner-btn.on { border-color: var(--fg); }
+.owner-label { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.owner-pop { position: absolute; top: calc(100% + 4px); left: 0; z-index: 40; width: max(100%, 280px); padding: 6px; display: flex; flex-direction: column; gap: 6px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, .12); }
+.owner-pop input { width: 100%; }
+.owner-list { max-height: 320px; overflow: auto; display: flex; flex-direction: column; }
+.owner-opt { display: block; width: 100%; padding: 7px 10px; border: 0; background: none; border-radius: 6px; font: inherit; color: var(--fg); text-align: left; cursor: pointer; }
+.owner-opt:hover, .owner-opt.active { background: var(--sunken); }
+.owner-opt[aria-selected="true"] { font-weight: 600; }
+.owner-none { padding: 7px 10px; color: var(--faint); }
+@media (max-width: 639px) { .owner-pop { left: auto; right: 0; width: calc(100vw - 24px); } }
